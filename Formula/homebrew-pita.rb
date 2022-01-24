@@ -5,12 +5,12 @@
 class HomebrewPita < Formula
   desc "Binary Distribution for Pita"
   homepage "https://github.com/dotunj/homebrew-pita"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.5/homebrew-pita_0.0.5_darwin_x86_64.tar.gz"
-      sha256 "4d4cccdee295638086b9b450d3b433288bc461e7966357d3f41ac799c1698eb2"
+      url "https://github.com/Dotunj/pita/releases/download/v0.0.6/homebrew-pita_0.0.6_darwin_x86_64.tar.gz"
+      sha256 "c5b1139c5df34438c0c6aeaaa894e3df1285c8b6923c3c327cabd5238941a31b"
 
       def install
         bin.install "homebrew-pita"
@@ -20,8 +20,8 @@ class HomebrewPita < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.5/homebrew-pita_0.0.5_linux_x86_64.tar.gz"
-      sha256 "c5d412017d9a06f8f8b3d55f2e6dd1f6cb01695e9c776e87c6925c918b6dc393"
+      url "https://github.com/Dotunj/pita/releases/download/v0.0.6/homebrew-pita_0.0.6_linux_x86_64.tar.gz"
+      sha256 "57d9df387b661580675d12542c0de432b1560e4043d70aae58f14c82e8159149"
 
       def install
         bin.install "homebrew-pita"

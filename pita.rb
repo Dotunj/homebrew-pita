@@ -5,20 +5,20 @@
 class Pita < Formula
   desc "Binary Distribution for Pita"
   homepage "https://github.com/dotunj/homebrew-pita"
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.9/pita_0.0.9_darwin_arm64.tar.gz"
-      sha256 "e5cb35f2209f6673caec70d282cab64f6c0480a49bf6861ead1e591ef2786bb6"
+      url "https://github.com/Dotunj/pita/releases/download/v0.0.10/pita_0.0.10_darwin_arm64.tar.gz"
+      sha256 "3677efbecaf5dca8e6d86d8019ad73e54838c03fa726bb54b8be04dc71cf78fc"
 
       def install
         bin.install "pita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.9/pita_0.0.9_darwin_x86_64.tar.gz"
-      sha256 "7ae6f0f4579b1a4e92ec7fa2de4384a819231ec7c7f6b7bf94d97727fe4faeb1"
+      url "https://github.com/Dotunj/pita/releases/download/v0.0.10/pita_0.0.10_darwin_x86_64.tar.gz"
+      sha256 "90d12aa561e1cb2ac5cdf479fdd22c8dcdb5b3fe50c819a42a5ca114087dfcc3"
 
       def install
         bin.install "pita"
@@ -28,16 +28,16 @@ class Pita < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.9/pita_0.0.9_linux_arm64.tar.gz"
-      sha256 "defd1fc3c672aa076b327653a8cacf71a83ac3c06d6d36e7981e162aefd5f803"
+      url "https://github.com/Dotunj/pita/releases/download/v0.0.10/pita_0.0.10_linux_arm64.tar.gz"
+      sha256 "30c35aca44a514327fb9fe6245f9571f46f0bdf63bfd15ae108b4eb73a5fd112"
 
       def install
         bin.install "pita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.9/pita_0.0.9_linux_x86_64.tar.gz"
-      sha256 "465cef2162005dc712361ca1832d1bdaa246ef360e419fb977f819e15a41bc3f"
+      url "https://github.com/Dotunj/pita/releases/download/v0.0.10/pita_0.0.10_linux_x86_64.tar.gz"
+      sha256 "958567e90ab23ccff1595d25644fbeef1e4a65627e923a243c163615f9be7b61"
 
       def install
         bin.install "pita"

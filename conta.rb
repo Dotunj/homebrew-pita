@@ -9,17 +9,17 @@ class Conta < Formula
   license "MPL-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_darwin_arm64.tar.gz"
-      sha256 "587728d2086b9261bf03dd4e1fa3102ecfd1d6547103856774e5d83b4389e4af"
+    if Hardware::CPU.intel?
+      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_darwin_amd64.tar.gz"
+      sha256 "f45fe7cc610a6aeaf7d4b52a9b51f576c27f56832ed334d9c04974a246d893f9"
 
       def install
         bin.install "conta"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_darwin_amd64.tar.gz"
-      sha256 "06f31812f1d165bc103f85385d7e15d8a55eabb864393d19d6aa9774f21da382"
+    if Hardware::CPU.arm?
+      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_darwin_arm64.tar.gz"
+      sha256 "1278836dd36975e2dba76c8906e4fc3b9b2389946e47dde7780fe909d058014c"
 
       def install
         bin.install "conta"
@@ -30,7 +30,7 @@ class Conta < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_linux_arm64.tar.gz"
-      sha256 "7ba1d02500b01c740a0774caf874f4a1b4f26640a1ca5bb2691432fb478129ad"
+      sha256 "180b6bf672860bb92ef1d014af9d77add7372da201cbe6952d4d891ed72d21a0"
 
       def install
         bin.install "conta"
@@ -38,7 +38,7 @@ class Conta < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_linux_amd64.tar.gz"
-      sha256 "e3502f3a2537548e69d7da05e9bd43bdc17a6775fe6087fd0762ed7421b1726c"
+      sha256 "bce79475c9c11d6156c89405081076cfcc5a1e5cc7065b84755ee2278f5346d2"
 
       def install
         bin.install "conta"

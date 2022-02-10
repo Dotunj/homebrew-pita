@@ -5,21 +5,21 @@
 class Conta < Formula
   desc "A Cloud native webhook service"
   homepage "https://getconvoy.io/"
-  version "0.5.2"
+  version "0.5.4"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.2/conta_0.5.2_darwin_arm64.tar.gz"
-      sha256 "e8b12c65993cfd7833f41256bf91dff53c767c6a273d3d6760096f226a75b531"
+      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_darwin_arm64.tar.gz"
+      sha256 "587728d2086b9261bf03dd4e1fa3102ecfd1d6547103856774e5d83b4389e4af"
 
       def install
         bin.install "conta"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.2/conta_0.5.2_darwin_x86_64.tar.gz"
-      sha256 "5da36f6b796ef1f72001bf12a35375872bb0347335363191651f9f5f13b6edde"
+      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_darwin_amd64.tar.gz"
+      sha256 "06f31812f1d165bc103f85385d7e15d8a55eabb864393d19d6aa9774f21da382"
 
       def install
         bin.install "conta"
@@ -29,16 +29,16 @@ class Conta < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.2/conta_0.5.2_linux_arm64.tar.gz"
-      sha256 "3aee476847b5b1e36bedf668edbac6a01fe3ba53304e975f41b006e3ff74857a"
+      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_linux_arm64.tar.gz"
+      sha256 "7ba1d02500b01c740a0774caf874f4a1b4f26640a1ca5bb2691432fb478129ad"
 
       def install
         bin.install "conta"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.2/conta_0.5.2_linux_x86_64.tar.gz"
-      sha256 "43fc11d090168244143162b9e96f9eb5a4608f62840a08e5946d4a7a68552a94"
+      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_linux_amd64.tar.gz"
+      sha256 "e3502f3a2537548e69d7da05e9bd43bdc17a6775fe6087fd0762ed7421b1726c"
 
       def install
         bin.install "conta"

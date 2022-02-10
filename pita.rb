@@ -5,20 +5,20 @@
 class Pita < Formula
   desc "Binary Distribution for Pita"
   homepage "https://github.com/dotunj/homebrew-pita"
-  version "0.0.20"
+  version "0.1.1-rc"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.20/pita_0.0.20_darwin_arm64.tar.gz"
-      sha256 "2249ffcc2f7bb635609286e8cdb9f3f5f754320be9b5a70cf93cc0cd206a488b"
+      url "https://github.com/Dotunj/pita/releases/download/v0.1.1-rc/pita_0.1.1-rc_darwin_arm64.tar.gz"
+      sha256 "0411df65f0a97cbaa18229c1748650773aeaab5fdf7b8ca60b83630cb8417dc8"
 
       def install
         bin.install "pita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.20/pita_0.0.20_darwin_x86_64.tar.gz"
-      sha256 "5e0f273bf500fa986f94ea48e8caf4854bfc9a49264877283a69a417f1a235cb"
+      url "https://github.com/Dotunj/pita/releases/download/v0.1.1-rc/pita_0.1.1-rc_darwin_x86_64.tar.gz"
+      sha256 "78db18c5e65db83e4d2cb5bf5002793eb2e918b9d0b5f62903c87b8e4506c810"
 
       def install
         bin.install "pita"
@@ -27,17 +27,17 @@ class Pita < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.20/pita_0.0.20_linux_x86_64.tar.gz"
-      sha256 "4031a6c1c62be7f2b2b6e063c3b5d2865c978a44c5042d6b9d560a2aef42a36f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Dotunj/pita/releases/download/v0.1.1-rc/pita_0.1.1-rc_linux_arm64.tar.gz"
+      sha256 "e75853d78d74dc689bc70b489bcb1558fb986b1c72ba85f08e072302edb66228"
 
       def install
         bin.install "pita"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dotunj/pita/releases/download/v0.0.20/pita_0.0.20_linux_arm64.tar.gz"
-      sha256 "d0a3e78f7b7769e94aeba2c2ae5ecac3536334cf8523cf6cc4c00439abba613c"
+    if Hardware::CPU.intel?
+      url "https://github.com/Dotunj/pita/releases/download/v0.1.1-rc/pita_0.1.1-rc_linux_x86_64.tar.gz"
+      sha256 "9b96c0ab062e3b41a1eee11f16b5ef3db1f4c4abcb30562a1040eb957f920de1"
 
       def install
         bin.install "pita"

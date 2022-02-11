@@ -5,20 +5,20 @@
 class Pita < Formula
   desc "Binary Distribution for Pita"
   homepage "https://github.com/dotunj/homebrew-pita"
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Dotunj/pita/releases/download/v0.1.9/pita_0.1.9_darwin_arm64.tar.gz"
-      sha256 "04e0dd1c88f7f3d334deb4fc1f6cc50711c4b5141d8d2aa175ff83ebcf6f58a5"
+      url "https://github.com/Dotunj/pita/releases/download/v0.1.10/pita_0.1.10_darwin_arm64.tar.gz"
+      sha256 "14c45eff04912fac0d255c23a27590bfbeccefc279ee5c7bac948340373c1eb8"
 
       def install
         bin.install "pita"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/pita/releases/download/v0.1.9/pita_0.1.9_darwin_x86_64.tar.gz"
-      sha256 "30a68c167d68250c512ceb707a022f64635a722239564efbd1a1d8aac93df702"
+      url "https://github.com/Dotunj/pita/releases/download/v0.1.10/pita_0.1.10_darwin_x86_64.tar.gz"
+      sha256 "59a3dd4e306b299eb3e2d6e8f6bd719b51f1c396710dd2db6c73d9646c68bedc"
 
       def install
         bin.install "pita"
@@ -27,17 +27,17 @@ class Pita < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/pita/releases/download/v0.1.9/pita_0.1.9_linux_x86_64.tar.gz"
-      sha256 "ba837181d4db4b76d1208a122b7a201f16283e766646ad177366154460316331"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Dotunj/pita/releases/download/v0.1.10/pita_0.1.10_linux_arm64.tar.gz"
+      sha256 "c256c232cb8d27484cdd146ce84dc8b9b34b81d9bbc14367340410aec1dbf322"
 
       def install
         bin.install "pita"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dotunj/pita/releases/download/v0.1.9/pita_0.1.9_linux_arm64.tar.gz"
-      sha256 "be74148408028240145c078f96fb266c963f6791ec282c8ea5976be50cfc842f"
+    if Hardware::CPU.intel?
+      url "https://github.com/Dotunj/pita/releases/download/v0.1.10/pita_0.1.10_linux_x86_64.tar.gz"
+      sha256 "de1b1d3a8903cb4770c473d7c4b6ec3332ed38fbc7064cadec1b12998d96341d"
 
       def install
         bin.install "pita"

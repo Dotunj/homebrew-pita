@@ -5,21 +5,21 @@
 class Conta < Formula
   desc "A Cloud native webhook service"
   homepage "https://getconvoy.io/"
-  version "0.5.4"
+  version "0.6.2"
   license "MPL-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_darwin_amd64.tar.gz"
-      sha256 "f45fe7cc610a6aeaf7d4b52a9b51f576c27f56832ed334d9c04974a246d893f9"
+    if Hardware::CPU.arm?
+      url "https://github.com/Dotunj/convoy/releases/download/v0.6.2/conta_0.6.2_darwin_arm64.tar.gz"
+      sha256 "ee9695194a7f6997e00d9e8fb62cca853508aaa87474fa6eb2c06ce0faf4fdc7"
 
       def install
         bin.install "conta"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_darwin_arm64.tar.gz"
-      sha256 "1278836dd36975e2dba76c8906e4fc3b9b2389946e47dde7780fe909d058014c"
+    if Hardware::CPU.intel?
+      url "https://github.com/Dotunj/convoy/releases/download/v0.6.2/conta_0.6.2_darwin_amd64.tar.gz"
+      sha256 "4d041ca47b44c1d4fe74496ccd7361be1d3a3266dd5cf8d8d704f8afaf467fd7"
 
       def install
         bin.install "conta"
@@ -28,17 +28,17 @@ class Conta < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_linux_arm64.tar.gz"
-      sha256 "180b6bf672860bb92ef1d014af9d77add7372da201cbe6952d4d891ed72d21a0"
+    if Hardware::CPU.intel?
+      url "https://github.com/Dotunj/convoy/releases/download/v0.6.2/conta_0.6.2_linux_amd64.tar.gz"
+      sha256 "52108319d51fc36df5e023370605b0432ab1549a5dd943cf1e6f8fdd6fe0c821"
 
       def install
         bin.install "conta"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.5.4/conta_0.5.4_linux_amd64.tar.gz"
-      sha256 "bce79475c9c11d6156c89405081076cfcc5a1e5cc7065b84755ee2278f5346d2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Dotunj/convoy/releases/download/v0.6.2/conta_0.6.2_linux_arm64.tar.gz"
+      sha256 "87ea4594b9e7aa3b7558f2f4385998e9667420e07ac2260b8332e4484f439c83"
 
       def install
         bin.install "conta"

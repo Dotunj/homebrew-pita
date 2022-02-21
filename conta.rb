@@ -5,21 +5,21 @@
 class Conta < Formula
   desc "A Cloud native webhook service"
   homepage "https://getconvoy.io/"
-  version "0.6.10"
+  version "0.6.11"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Dotunj/conta/releases/download/v0.6.10/conta_0.6.10_darwin_arm64.tar.gz"
-      sha256 "b2c39d4e2a22248d0efbeb5f06eea5b2d8b90c3066321cae2c74bc06648eb9f9"
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.11/conta_0.6.11_darwin_arm64.tar.gz"
+      sha256 "950c291d77d90c5c0cd619daf60fab5793f726a5650100014cb6ea7e33e58260"
 
       def install
         bin.install "conta"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/conta/releases/download/v0.6.10/conta_0.6.10_darwin_amd64.tar.gz"
-      sha256 "9268f8dd5a5a1d2da2b71c63474cfd0f92cae0e060522c9757639f25dbd3f555"
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.11/conta_0.6.11_darwin_amd64.tar.gz"
+      sha256 "1a9140cdca42e7ca5b81c9d01036fa19dbfda30bb20c8bf7b229b2a941914c05"
 
       def install
         bin.install "conta"
@@ -28,17 +28,17 @@ class Conta < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/conta/releases/download/v0.6.10/conta_0.6.10_linux_amd64.tar.gz"
-      sha256 "ab4c79b95dca0b2ed75a85c6b6340396f01e1d91daf13cc293e4cde8c6e9504c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.11/conta_0.6.11_linux_arm64.tar.gz"
+      sha256 "12ac4c7c8cf8f92b666eede8679fdbf44bba92180de452c135efb70a01f4736e"
 
       def install
         bin.install "conta"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dotunj/conta/releases/download/v0.6.10/conta_0.6.10_linux_arm64.tar.gz"
-      sha256 "07a53140547012040f3104896217934c19cf67f2928ab9a19848e04937722077"
+    if Hardware::CPU.intel?
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.11/conta_0.6.11_linux_amd64.tar.gz"
+      sha256 "ea4bbf09d4c10dfbf931fcc0b2ca4758378cca91d42f0cf07cd50652ea6851ba"
 
       def install
         bin.install "conta"

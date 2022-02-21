@@ -5,21 +5,21 @@
 class Conta < Formula
   desc "A Cloud native webhook service"
   homepage "https://getconvoy.io/"
-  version "0.6.5"
+  version "0.6.10"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.6.5/conta_0.6.5_darwin_arm64.tar.gz"
-      sha256 "7904199c9c4d650106f716fa8f0edfacc03aa53873016b1563a89ea64b35da7a"
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.10/conta_0.6.10_darwin_arm64.tar.gz"
+      sha256 "b2c39d4e2a22248d0efbeb5f06eea5b2d8b90c3066321cae2c74bc06648eb9f9"
 
       def install
         bin.install "conta"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.6.5/conta_0.6.5_darwin_amd64.tar.gz"
-      sha256 "c599e136879b8af64e235b344b3265a698864da3522bc1d09f0673e6a16c4c7e"
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.10/conta_0.6.10_darwin_amd64.tar.gz"
+      sha256 "9268f8dd5a5a1d2da2b71c63474cfd0f92cae0e060522c9757639f25dbd3f555"
 
       def install
         bin.install "conta"
@@ -28,17 +28,17 @@ class Conta < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.6.5/conta_0.6.5_linux_arm64.tar.gz"
-      sha256 "2d1b9e62ddd8e43dcddbdfbcb87bdbd5e3a8a1bb8a22b29c95eef22b1aa991a5"
+    if Hardware::CPU.intel?
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.10/conta_0.6.10_linux_amd64.tar.gz"
+      sha256 "ab4c79b95dca0b2ed75a85c6b6340396f01e1d91daf13cc293e4cde8c6e9504c"
 
       def install
         bin.install "conta"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/convoy/releases/download/v0.6.5/conta_0.6.5_linux_amd64.tar.gz"
-      sha256 "704a79134afc6ea501def51d28a992c8856c3fa4ebc349a2123f38cd4406512c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.10/conta_0.6.10_linux_arm64.tar.gz"
+      sha256 "07a53140547012040f3104896217934c19cf67f2928ab9a19848e04937722077"
 
       def install
         bin.install "conta"

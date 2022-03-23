@@ -5,21 +5,21 @@
 class Conta < Formula
   desc "A Cloud native webhook service"
   homepage "https://getconvoy.io/"
-  version "0.6.11"
+  version "0.6.13"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Dotunj/conta/releases/download/v0.6.11/conta_0.6.11_darwin_arm64.tar.gz"
-      sha256 "950c291d77d90c5c0cd619daf60fab5793f726a5650100014cb6ea7e33e58260"
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.13/conta_0.6.13_darwin_arm64.tar.gz"
+      sha256 "2479c8a489d320525c1ac98a771d021cd7b684010c3185f26139fda711b63f5f"
 
       def install
         bin.install "conta"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/conta/releases/download/v0.6.11/conta_0.6.11_darwin_amd64.tar.gz"
-      sha256 "1a9140cdca42e7ca5b81c9d01036fa19dbfda30bb20c8bf7b229b2a941914c05"
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.13/conta_0.6.13_darwin_amd64.tar.gz"
+      sha256 "ccf5b8c110d2a7041837b8a519b96a2271d5978a2ee183fb3e8a70453b2cb52c"
 
       def install
         bin.install "conta"
@@ -29,16 +29,16 @@ class Conta < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dotunj/conta/releases/download/v0.6.11/conta_0.6.11_linux_arm64.tar.gz"
-      sha256 "12ac4c7c8cf8f92b666eede8679fdbf44bba92180de452c135efb70a01f4736e"
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.13/conta_0.6.13_linux_arm64.tar.gz"
+      sha256 "364a0f56d3d538dde83157d890e07a76eb2c41440c914e70a8ec452c85b690f1"
 
       def install
         bin.install "conta"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Dotunj/conta/releases/download/v0.6.11/conta_0.6.11_linux_amd64.tar.gz"
-      sha256 "ea4bbf09d4c10dfbf931fcc0b2ca4758378cca91d42f0cf07cd50652ea6851ba"
+      url "https://github.com/Dotunj/conta/releases/download/v0.6.13/conta_0.6.13_linux_amd64.tar.gz"
+      sha256 "3667b431d24d7c957debfd3e581e11ea082877e7f888ab0e636839687969d5e8"
 
       def install
         bin.install "conta"

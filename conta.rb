@@ -5,21 +5,21 @@
 class Conta < Formula
   desc "A Cloud native webhook service"
   homepage "https://getconvoy.io/"
-  version "0.6.21"
+  version "0.6.22"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.21/v0.6.21/conta_0.6.21_darwin_arm64.tar.gz"
-      sha256 "c74bdddfbe846127dbf2fddbfbd8ed671cd6f3608b336c70c2f3f189ff834819"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.22/v0.6.22/conta_0.6.22_darwin_arm64.tar.gz"
+      sha256 "c3f437dc6fcd988c3bc932b3d05beb4479f05479c00b0ed9f47f85cdc1c51406"
 
       def install
         bin.install "conta"
       end
     end
     if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.21/v0.6.21/conta_0.6.21_darwin_amd64.tar.gz"
-      sha256 "c1ef660f872ea528ec0c2a16259b74cb86d4e8ce2fef1a2d00b47c46a9a6b3a6"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.22/v0.6.22/conta_0.6.22_darwin_amd64.tar.gz"
+      sha256 "8204435798d699b12663a234f5c08327daff973ee5ef6ee7e1b6e141785e1de9"
 
       def install
         bin.install "conta"
@@ -29,16 +29,16 @@ class Conta < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.21/v0.6.21/conta_0.6.21_linux_arm64.tar.gz"
-      sha256 "0f2d86e3f06a99277c650192cf48c428654a85fae87045eda6c34ff94258d8f1"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.22/v0.6.22/conta_0.6.22_linux_arm64.tar.gz"
+      sha256 "d332b6207f590062e3b0eff0edf7c5d51b73810859965902d0a6c68be311b316"
 
       def install
         bin.install "conta"
       end
     end
     if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.21/v0.6.21/conta_0.6.21_linux_amd64.tar.gz"
-      sha256 "b234278948c020e8ca56ba580695e15017433814f0ee8683dac6f34a7181dae5"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.22/v0.6.22/conta_0.6.22_linux_amd64.tar.gz"
+      sha256 "b02561cc0eac9bd196d8ddabe768f0706f65e2d0dc8a155f83ce42d79193a8d3"
 
       def install
         bin.install "conta"

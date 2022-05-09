@@ -5,21 +5,21 @@
 class Conta < Formula
   desc "A Cloud native webhook service"
   homepage "https://getconvoy.io/"
-  version "0.6.34"
+  version "0.6.35"
   license "MPL-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.34/v0.6.34/conta_0.6.34_darwin_arm64.tar.gz"
-      sha256 "c25a0ec32d9f7e4e61b8f24eb62cf35b5f8c180ea887b0d3413f21935d488a0a"
+    if Hardware::CPU.intel?
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.35/conta_0.6.35_darwin_amd64.tar.gz"
+      sha256 "df2f711fc724965684648b08fee45ec836397a13f03f76a343e8f67afe5dc564"
 
       def install
         bin.install "conta"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.34/v0.6.34/conta_0.6.34_darwin_amd64.tar.gz"
-      sha256 "376f6f8934b89e2b575dac49daf4a1680bd194918fb64f8213aef0ab740716a8"
+    if Hardware::CPU.arm?
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.35/conta_0.6.35_darwin_arm64.tar.gz"
+      sha256 "8d64cdef84b6e8eeeb59678397fb71f815a4e0a65bbeaed1aed684dc369baabf"
 
       def install
         bin.install "conta"
@@ -28,17 +28,17 @@ class Conta < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.34/v0.6.34/conta_0.6.34_linux_amd64.tar.gz"
-      sha256 "dc4eaa653a0b989787d771ac3796090efa91c631e06050f96bd7bf37da831ad0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.35/conta_0.6.35_linux_arm64.tar.gz"
+      sha256 "88f499908db687ebf1dc7ed6179941e4e0d957aadaaad755e46871adb1878fb5"
 
       def install
         bin.install "conta"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.34/v0.6.34/conta_0.6.34_linux_arm64.tar.gz"
-      sha256 "21a323a8660e1b5d1720890b14b6841a4f336b561c3c986615f454a34addec02"
+    if Hardware::CPU.intel?
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.35/conta_0.6.35_linux_amd64.tar.gz"
+      sha256 "fc6bd7f48be51538f06899ad1562ed01d90abb8b815492375bc16cb83c705087"
 
       def install
         bin.install "conta"
